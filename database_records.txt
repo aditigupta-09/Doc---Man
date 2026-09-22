@@ -1,0 +1,79 @@
++======================================================================+
+| Active Database: PostgreSQL on port 4321                             |
+| Database Name:   omnidocs                                            |
+| Last Updated:    2026-08-10 02:02:52                                 |
++======================================================================+
+
+=== USERS INDEX ===
+ID | Email Address     | System Role
+------------------------------------
+2  | admin@test.com    | Admin      
+3  | employee@test.com | Employee   
+4  | viewer@test.com   | Viewer     
+5  | avishi@test.com   | Employee   
+
+
+=== DOCUMENTS INDEX ===
+ID | Filename                                                 | Category            | Uploaded By       | Version | Size (bytes)
+--------------------------------------------------------------------------------------------------------------------------------
+1  | cf580ceb-9184-4271-ad53-d8d298a380d8.jpg                 | General             | employee@test.com | 1       | 124083      
+2  | ES_-_Oracle_Cloud_PLM_OCPLM_Functional_Consultant_2.docx | HR                  | employee@test.com | 1       | 2582756     
+3  | Abhijeet_Gen_AI_Engineer_-_Copy_2.docx                   | General             | employee@test.com | 1       | 52189       
+4  | Arush_Singhal_Aadhaar.jpg                                | Identity            | employee@test.com | 3       | 124083      
+14 | test.txt                                                 | General             | employee@test.com | 3       | 86          
+15 | Identity_Card_Aadhaar.pdf                                | Identity            | employee@test.com | 2       | 519004      
+25 | ECM_AI_Benchmark_Pro_Newgen_vs_Competitors.xlsx          | General             | avishi@test.com   | 1       | 18084       
+26 | Identity_Card_PAN.jpg                                    | Identity            | avishi@test.com   | 1       | 1474488     
+27 | E0926B9C-9082-4C3F-94A1-BFEAA5DB7A13.jpg                 | General             | avishi@test.com   | 1       | 1942266     
+28 | .keep                                                    | important documents | employee@test.com | 1       | 0           
+
+
+=== DOCUMENT ACCESS REQUESTS ===
+ID | Document Name                                            | Requester Email | Status   | Purpose
+----------------------------------------------------------------------------------------------------
+1  | Arush_Singhal_Aadhaar.jpg                                | viewer@test.com | APPROVED |        
+2  | Abhijeet_Gen_AI_Engineer_-_Copy_2.docx                   | viewer@test.com | APPROVED |        
+3  | ES_-_Oracle_Cloud_PLM_OCPLM_Functional_Consultant_2.docx | viewer@test.com | APPROVED |        
+
+
+=== PASSWORD RESET REQUESTS ===
+ID | User Email        | Status   | Temporary Password
+------------------------------------------------------
+1  | employee@test.com | APPROVED | 12345             
+2  | employee@test.com | APPROVED | 12345             
+3  | employee@test.com | APPROVED | 12345             
+
+
+=== RECENT SYSTEM AUDIT LOGS (LAST 30) ===
+ID  | Timestamp           | User              | Action         | Details                                                                                                                                   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+216 | 2026-08-08 02:17:19 | admin@test.com    | LOGIN_SUCCESS  | User logged in successfully with role: Admin                                                                                              
+215 | 2026-08-08 02:16:44 | admin@test.com    | LOGIN_FAILURE  | Invalid email or password attempt                                                                                                         
+214 | 2026-08-08 02:16:19 | admin@test.com    | LOGIN_FAILURE  | Invalid email or password attempt                                                                                                         
+213 | 2026-08-08 02:15:30 | employee@test.com | LOGIN_FAILURE  | Invalid email or password attempt                                                                                                         
+212 | 2026-08-08 02:11:13 | admin@test.com    | LOGIN_SUCCESS  | User logged in successfully with role: Admin                                                                                              
+211 | 2026-08-08 02:09:53 | admin@test.com    | LOGIN_FAILURE  | Invalid email or password attempt                                                                                                         
+210 | 2026-08-08 02:09:01 | employee@test.com | LOGIN_FAILURE  | Invalid email or password attempt                                                                                                         
+209 | 2026-08-08 02:08:44 | employee@test.com | LOGIN_FAILURE  | Invalid email or password attempt                                                                                                         
+208 | 2026-08-08 02:01:04 | employee@test.com | CREATE_FOLDER  | Created folder: /important documents                                                                                                      
+207 | 2026-08-08 01:55:55 | employee@test.com | LOGIN_SUCCESS  | User logged in successfully with role: Employee                                                                                           
+206 | 2026-08-08 01:49:50 | avishi@test.com   | UPLOAD         | Uploaded version 3 for document Arush_Singhal_Aadhaar.jpg                                                                                 
+205 | 2026-08-08 01:45:05 | avishi@test.com   | UPLOAD         | Uploaded version 2 for document Arush_Singhal_Aadhaar.jpg                                                                                 
+204 | 2026-08-08 01:25:20 | avishi@test.com   | UPLOAD         | Created new document E0926B9C-9082-4C3F-94A1-BFEAA5DB7A13.jpg inside folder /General/Image_Files                                          
+203 | 2026-08-08 01:23:43 | avishi@test.com   | UPLOAD         | Created new document Identity_Card_PAN.jpg inside folder /Identity/PAN_ID_Cards                                                           
+202 | 2026-08-08 01:22:21 | avishi@test.com   | DOWNLOAD       | Downloaded file: ECM_AI_Benchmark_Pro_Newgen_vs_Competitors.xlsx                                                                          
+201 | 2026-08-08 01:20:04 | avishi@test.com   | UPLOAD         | Created new document ECM_AI_Benchmark_Pro_Newgen_vs_Competitors.xlsx inside folder /General/Spreadsheets                                  
+200 | 2026-08-08 01:12:32 | avishi@test.com   | DELETE         | Permanently deleted document: General/PDF_Documents/COVERLETTER.pdf and all physical files                                                
+199 | 2026-08-08 01:12:18 | avishi@test.com   | LOGIN_SUCCESS  | User logged in successfully with role: Employee                                                                                           
+198 | 2026-08-08 01:08:43 | employee@test.com | DELETE         | Permanently deleted document: Identity/PAN_ID_Cards/Identity_Card_PAN.jpg and all physical files                                          
+197 | 2026-08-08 01:08:41 | employee@test.com | DELETE         | Permanently deleted document: Education/Multimodal_Assignments/Multimodal_AI-based_Disaster_Damage_Assessment_1.pdf and all physical files
+196 | 2026-08-08 01:08:41 | employee@test.com | DELETE         | Permanently deleted document: Education/Man_Assignments/Doc-Man_Industry_Style_FRS_User_Manual.docx and all physical files                
+195 | 2026-08-08 01:08:26 | employee@test.com | LOGIN_SUCCESS  | User logged in successfully with role: Employee                                                                                           
+194 | 2026-08-08 01:08:22 | employee@test.com | LOGIN_FAILURE  | Invalid email or password attempt                                                                                                         
+193 | 2026-08-08 01:08:15 | employe@test.com  | LOGIN_FAILURE  | Invalid email or password attempt                                                                                                         
+192 | 2026-08-08 01:08:15 | employe@test.com  | LOGIN_FAILURE  | Invalid email or password attempt                                                                                                         
+191 | 2026-08-08 01:08:15 | employe@test.com  | LOGIN_FAILURE  | Invalid email or password attempt                                                                                                         
+190 | 2026-08-08 00:56:40 | avishi@test.com   | UPLOAD         | Created new document COVERLETTER.pdf inside folder /General/PDF_Documents                                                                 
+189 | 2026-08-08 00:55:55 | avishi@test.com   | DELETE         | Permanently deleted document: HR/About_Resumes/About.pdf.pdf and all physical files                                                       
+188 | 2026-08-08 00:55:22 | avishi@test.com   | LOGIN_SUCCESS  | User logged in successfully with role: Employee                                                                                           
+187 | 2026-08-08 00:48:38 | admin@test.com    | ACCESS_APPROVE | Approved access for user viewer@test.com to document: Multimodal_AI-based_Disaster_Damage_Assessment_1.pdf                                
